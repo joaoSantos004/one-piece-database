@@ -12,6 +12,9 @@ const mangaRoutes = require('./mangaRoutes');
 const chapterRoutes = require('./chapterRoutes');
 const sagaRoutes = require('./sagaRoutes');
 const storyArcRoutes = require('./storyArcRoutes');
+const viewRoutes = require('./viewRoutes');
+const procedureRoutes = require('./procedureRoutes');
+
 
 router.get('/', (req, res) => {
   res.json({ message: 'Welcome to the One Piece API' });
@@ -28,5 +31,7 @@ router.use('/manga', mangaRoutes);
 router.use('/chapters', chapterRoutes);
 router.use('/sagas', sagaRoutes);
 router.use('/storyarcs', storyArcRoutes);
+router.use('/views', viewRoutes);
+router.use('/procedures', procedureRoutes);
 
 module.exports = router;

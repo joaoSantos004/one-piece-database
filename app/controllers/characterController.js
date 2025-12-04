@@ -30,17 +30,17 @@ exports.getCharacters = async (req, res) => {
   }
 };
 
-// READ ONE (with joins – this can be your multi-join demo)
+// READ ONE
 exports.getCharacterDetails = async (req, res) => {
   try {
     const character = await Character.findByPk(req.params.id, {
       include: [
         { model: Location },
-        { model: Organization },    // through OrganizationMember
-        { model: DevilFruit },      // through CharacterDevilFruit
-        { model: Haki },            // through CharacterHaki
-        { model: Episode },         // through CharacterEpisode
-        { model: Chapter },         // through CharacterChapter
+        { model: Organization },    
+        { model: DevilFruit },    
+        { model: Haki },         
+        { model: Episode },       
+        { model: Chapter }, 
       ],
     });
 

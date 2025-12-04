@@ -10,14 +10,14 @@ module.exports = (sequelize, DataTypes) => {
       name: {
         type: DataTypes.STRING(100),
         allowNull: false,
-        unique: true, // UNIQUE: no two fruits with same name
+        unique: true,
       },
       fruit_type: {
-        type: DataTypes.STRING(50), // Paramecia, Logia, Zoan
+        type: DataTypes.STRING(50), 
         allowNull: false,
       },
       sub_type: {
-        type: DataTypes.STRING(50), // Mythical Zoan, Ancient Zoan, etc
+        type: DataTypes.STRING(50),
       },
       description: {
         type: DataTypes.TEXT,
